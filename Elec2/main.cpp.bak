@@ -1,0 +1,24 @@
+#include "Elec.h"
+#include <QtGui/QApplication>
+#include <ObjBase.h>
+#include "DATAOperate.h"
+#include <QMessageBox>
+#include <QDebug>
+#include <QTextCodec>
+
+int main(int argc, char *argv[])
+{
+	CoInitialize(NULL);
+
+	QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF8"));
+	QString strMessage = QString::fromLocal8Bit("我是UTF8编码的文件：");
+	qDebug() << strMessage;
+
+	QApplication a(argc, argv);
+
+	qDebug() << "你好" << "!!!!!!!!!!!!!!!!!";
+
+	Elec w;
+	//w.show();
+	return a.exec();
+}
